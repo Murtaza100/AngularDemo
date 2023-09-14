@@ -1,0 +1,28 @@
+Note- insert(),save(),update(),remove() - depricated in almost all major language drivers
+
+sudo service mongodb start
+sudo service mongodb stop
+
+> db.createCollection("customer")
+> show collections
+> db.customer.insertMany([{name:"Harry",age:29,gender:"male"},{name:"shambhavi",age:25,gender:"female"},{name:"Faisal",age:23,gender:"male"}])
+> db.customer.insertOne({name:"Firdous",age:25,gender:"female",hobby:"reading"})
+> db.customer.find()
+> db.customer.find({gender:"female"})
+> db.customer.find({gender:"female"}).pretty()
+> db.customer.find({gender:"female"},{gender:false,id:false}).pretty()
+> db.customer.findOne()
+> db.customer.findOne({name:"Harry"})
+> db.customer.updateOne({name:"Harry"},{$set:{age:50,country:"India"}})
+> db.customer.updateMany({name:"Harry"},{$set:{age:40,country:"India"}})
+> db.customer.replaceOne({name:"shambhavi"},{name:"sambhavi M",country:"India",age:30,gender:"female"})
+> db.customer.deleteOne({name:"Firdous"})
+> db.customer.deleteMany({name:"Harry"})
+> db.customer.deleteOne({})
+> db.customer.deleteMany({})
+
+
+
+
+
+

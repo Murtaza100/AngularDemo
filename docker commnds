@@ -1,0 +1,62 @@
+ls -l /etc/alternatives/java to know jdk path
+
+-----------------------------------------------------------------------------------------------------
+
+sudo apt-get update
+sudo apt install docker.io -> install docker
+sudo snap install docker
+sudo systemctl status docker -> check docker status
+
+------------------------------------------------------------------------------------------------------
+
+sudo systemctl stop rabbitmq-server -> stop rabbit mq
+sudo systemctl start rabbitmq-server -> start rabbit mq
+
+------------------------------------------------------------------------------------------------------
+
+sudo docker run hello-world -> pull and run image as container
+sudo docker images -> show images
+sudo docker ps -a -> show all containers
+sudo docker ps -> show running containers
+docker pull mongo:latest -> pull mongo image from docker hub 
+sudo docker logs CONTAINER ID -> to view logs
+sudo docker stop CONTAINER ID -> to stop container
+sudo docker kill CONTAINER ID -> to kill container
+sudo docker -i -t CONTAINER ID sh -> to get into container
+
+-------------------------------------------------------------------------------------------------------
+
+create custom image:-
+
+1. choose base image
+2. run commands for your software
+3. specify base commands to be run at startup
+
+--------------------------------------------------------------------------------------------------------
+
+sudo docker build -f Dockerfile -t <imageName> . -> build docker image with tagName and FileName
+sudo docker build . -> automatically fetches Dockerfile to build image
+sudo docker build -t name/imgname:latest . -> build docker image with tagName
+sudo docker commit -c 'msg' -> commit docker image
+
+--------------------------------------------------------------------------------------------------------
+
+sudo docker exec -it mongoContainer mongosh -> get inside mongo shell while running with docker as container
+sudo docker build -t userservice-erepairo:1.0 . -> build docker image with tagName userservice-erepairo:1.0
+sudo docker run -p 9091:9091 userservice-erepairo:1.0 -> running springboot image as container
+
+--------------------------------------------------------------------------------------------------------
+
+sudo docker-compose up --remove-orphans -> to start docker compose
+sudo docker-compose down --remove-orphans -> to stop docker compose
+
+--------------------------------------------------------------------------------------------------------
+
+network disconnect -f {network} {endpoint-name} -> to disconnect docker from network
+docker network inspect {network} -> to view network information
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose -> to change docker compose version
+sudo chmod +x /usr/local/bin/docker-compose -> setting docker compose file to reflect the changed version of docker compose
+
+----------------------------------------------------------------------------------------------------------
+
